@@ -1,0 +1,18 @@
+{
+  "name": "Aplicação HTML5 Desktop com Electron",
+  "version": "1.0.0",
+  "description": "Aplicação HTML5 Desktop de exemplo com Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "Cleomar Cantil",
+  "license": "",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  }
+}
