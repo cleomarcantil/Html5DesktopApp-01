@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Aplicação HTML5 Desktop com Electron</title>
-  </head>
-  <body>
+<head>
+	<meta charset="UTF-8">
+	<title>Aplicação HTML5 Desktop com Electron</title>
+</head>
+<body>
 	<h1>Aplicação HTML5 Desktop com Electron</h1>
-	
+
 	<p>
-		Baseado no exemplo quick-start padrão
+		Baseado no exemplo quick-start padrão. Atualizado para usar typescript
 	</p>
 
 	<p>
 		<!-- All of the Node.js APIs are available in this renderer process. -->
-		Node.js <script>document.write(process.versions.node)</script>,
-		Chromium <script>document.write(process.versions.chrome)</script>,
-		Electron <script>document.write(process.versions.electron)</script>.
+		Node.js
+		<script>document.write(process.versions.node)</script>,
+		Chromium
+		<script>document.write(process.versions.chrome)</script>,
+		Electron
+		<script>document.write(process.versions.electron)</script>.
 	</p>
 
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
-  </body>
+	<script>
+		// You can also require other files to run in this process
+		require('./dist/renderer.js')
+	</script>
+</body>
 </html>

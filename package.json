@@ -1,18 +1,22 @@
 {
-  "name": "Aplicação HTML5 Desktop com Electron",
+  "name": "aplicacao-html5-desktop-electronjs",
   "version": "1.0.0",
   "description": "Aplicação HTML5 Desktop de exemplo com Electron",
-  "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "start": "npm run build && electron ./dist/main.js"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
-    "Electron"
+    "Electron",
+    "typescript"
   ],
   "author": "Cleomar Cantil",
   "license": "",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "electron": "^3.0.2",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.1"
   }
 }
