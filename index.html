@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
 	<title>Aplicação HTML5 Desktop com Electron</title>
 </head>
 <body>
@@ -12,18 +13,12 @@
 	</p>
 
 	<p>
-		<!-- All of the Node.js APIs are available in this renderer process. -->
-		Node.js
-		<script>document.write(process.versions.node)</script>,
-		Chromium
-		<script>document.write(process.versions.chrome)</script>,
-		Electron
-		<script>document.write(process.versions.electron)</script>.
+		We are using Node.js <span id="node-version"></span>,
+		Chromium <span id="chrome-version"></span>,
+		and Electron <span id="electron-version"></span>.
 	</p>
 
-	<script>
-		// You can also require other files to run in this process
-		require('./dist/renderer.js')
-	</script>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
 </body>
 </html>
