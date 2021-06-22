@@ -2,8 +2,10 @@
   "name": "aplicacao-html5-desktop-electronjs",
   "version": "1.0.0",
   "description": "Aplicação HTML5 Desktop de exemplo com Electron",
+  "main": "dist/main.js",
   "scripts": {
-    "build": "tsc",
+    "copy": "copyfiles -u 1 src/public/*.* dist",
+    "build": "tsc && npm run copy",
     "watch": "tsc -w",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "start": "npm run build && electron ./dist/main.js"
@@ -15,6 +17,7 @@
   "author": "Cleomar Cantil",
   "license": "",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "electron": "^13.1.2",
     "tslint": "^6.1.3",
     "typescript": "^4.3.4"
